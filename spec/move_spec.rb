@@ -2,13 +2,18 @@ require_relative "../lib/move.rb"
 
 describe './lib/move.rb' do
   it 'defines a method move' do
+    board = Array.new(9, " ")
+    expect {move(board, 2, "X")}.to_not raise_error
   end
 
   context '#move' do
-    it 'accepts 3 arguments' do
+    it 'accepts 3 arguments: the board, the position a player wants to fill and their char, X or O' do
+      expect {move}.to raise_error
     end
 
     it 'provides a default value for the 3rd argument' do
+      board = Array.new(9, " ")
+      expect {move(board, 2)}.to_not raise_error
     end
 
     it 'allows "X" player in the top left position' do
