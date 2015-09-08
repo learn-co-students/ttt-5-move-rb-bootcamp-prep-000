@@ -6,4 +6,15 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-# code your input_to_index and move method here!
+
+def move(board, location, current_player = "X")
+  board[location.to_i-1] = current_player
+end
+
+puts "Welcome to Tic Tac Toe"
+board = Array.new(9, " ")
+puts "Where would you like to go?"
+input = gets.strip
+
+move(board, input, "X")
+display_board(board)
