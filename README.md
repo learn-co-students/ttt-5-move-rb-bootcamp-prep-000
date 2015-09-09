@@ -21,7 +21,8 @@ bin
 lib
   |–– move.rb
 spec
-  |–– move_spec.rb
+  |–– 01_move_spec.rb
+  |–– 02_cli_spec.rb
   |–– spec_helper.rb
 ...
 ``` 
