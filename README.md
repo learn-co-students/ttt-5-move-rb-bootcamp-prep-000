@@ -2,8 +2,11 @@
 
 ## Objectives
 
-1. Define a method that takes in a player's input to add their move to the game board. 
-2. Write an executable program that a user can interact with from the command line. 
+1. Define a method that updates an array passed to it.
+2. Define a method with a default value.
+3. Use a method in a CLI.
+4. Accept user input via gets.
+5. Use user input in a method.
 
 ## Overview
 
@@ -75,7 +78,7 @@ The first part of this lab is test-driven. Run `learn` to get started and use th
 
 Notice that we've already given you the `#display_board` method, since we've already built that out in a previous exercise. 
 
-**Hint:** Your `#move` method must take in three arguments, the board array, the location in the board array that the player would like to fill out with an "X" or and "O", and the player's character (either "X" or "O"). If the user's input is `5`, the player wants to fill out position 5 with their character. This means that your method must fill out the correct array index with the player's character. Remember that, from the player's point of view, the board contains spaces 1-9. But, an array's indexes start their count at 0. You'll have to account for that in your `#move` method. 
+**Hint:** Your `#move` method must take in three arguments, the board array, the location in the board array that the player would like to fill out with an "X" or and "O", and the player's character (either "X" or "O"). The third argument, the player's character, should have a default of "X". Regarding the player's input: if the user's input is `5`, the player wants to fill out position 5 with their character. This means that your method must fill out the correct array index with the player's character. Remember that, from the player's point of view, the board contains spaces 1-9. But, an array's indexes start their count at 0. You'll have to account for that in your `#move` method. 
 
 Once you have the tests passing, move on to part II. 
 
@@ -84,7 +87,7 @@ Once you have the tests passing, move on to part II.
 Open up `bin/move`. We're ready to code the executable portion of this program. 
 
 1. Our program should first welcome the player by outputting a friendly message to the terminal: "Welcome to Tic Tac Toe".
-2. Next, create a new board by setting a variable `board` equal to instantiating a new array with 9 elements, each of which is a blank space, `" "`.  
+2. Next, establish the starting state of the game, i.e. the empty board. Create a new board by setting a variable `board` equal to instantiating a new array with 9 elements, each of which is a blank space, `" "`.  
 3. Now, ask the user for input by outputting "Where would you like to go?" to the terminal. 
 4. We need to store the user's input. Use `gets.strip` to store their input to a variable, `input`. 
 5. Now we're ready to call our `#move` method. Do so with the arguments of the the `board`, the user's `input` and either an `"X"` or an `"O"`. It doesn't matter whether you choose "X" or "O". 
