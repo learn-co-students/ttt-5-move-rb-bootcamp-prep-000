@@ -10,7 +10,7 @@
 
 ## Overview
 
-In this exercise, we'll be adding on to our tic tac toe game's functionality. We already have a method, `#display_board`, that prints out the tic tac toe board to the console and maps each location of the board to an array index. Consequently, we've set up our board so that it will be easy to fill out each position with a user's input, i.e. an "X" or an "O". Now, we'll build a method that asks the player for the position on the board, i.e. location in the array, that they like to fill out with an "X" or an "O". We'll need to store that input and then actually fill out the appropriate position. 
+In this lab we'll be adding a `move` method to Tic Tac Toe to update the board with a player's token. The `move` method represents a user moving into a position, like the middle cell, in Tac Tac Toe. We already have a method, `#display_board`, that prints out the tic tac toe board to the console and maps each location of the board to an array index. Then, we'll build a CLI that asks the player for the position on the board, i.e. location in the array, that they like to fill out with an "X" or an "O", updates the board, and displays the updated board.
 
 ## Project Structure
 
@@ -65,6 +65,7 @@ Our program will:
 1. Print out a welcome message.
 2. Ask the user to input the position on the board they would like to fill.
 3. Fill out that position with either an "X" or and "O".
+4. Print the updated board.
 
 Okay, we're ready to start coding!
 
