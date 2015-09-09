@@ -2,4 +2,11 @@
 
 require_relative '../lib/move.rb'
 
-# add your executable code for the user to interact with here!
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+puts "Welcome to Tic Tac Toe!"
+puts "Please enter 1-9:"
+input = user_input
+
+move(board, input, "X")
+display_board(board)
