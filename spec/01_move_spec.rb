@@ -1,7 +1,7 @@
 require_relative "../lib/move.rb"
 
 describe './lib/move.rb' do
-  it 'defines a method move' do
+  it 'defines a move method' do
     board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
     expect(defined?(move)).to be_truthy
   end
