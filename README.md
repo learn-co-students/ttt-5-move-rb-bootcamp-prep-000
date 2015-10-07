@@ -65,7 +65,7 @@ Our program will:
 
 1. Print out a welcome message.
 2. Ask the user to input the position on the board they would like to fill.
-3. Fill out that position with either an "X" or and "O".
+3. Fill out that position with either an "X" or an "O".
 4. Print the updated board.
 
 Okay, we're ready to start coding!
