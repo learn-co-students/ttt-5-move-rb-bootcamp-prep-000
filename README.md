@@ -86,6 +86,8 @@ The player's input is the string `'5'`, the first thing you'll need to do is con
 
 Also remember, from the player's point of view, the board contains spaces 1-9. An array's indexes start their count at 0. You'll have to account for that in your `#move` method.
 
+Finally, `#move` should return the modified array with the updated index corresponding to the player's token. Don't create a new local variable for the board array, modify the one passed in as the argument and return it.
+
 Once you have the tests passing, move on to part II.
 
 ### Part II: The CLI
