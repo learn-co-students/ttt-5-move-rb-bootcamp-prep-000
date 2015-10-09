@@ -11,7 +11,7 @@ describe './bin/move executing a CLI Application' do
     expect(board).to eq([" ", " ", " ", " ", " ", " ", " ", " ", " "])
   end
 
-  it 'prints "Welcome to Tic Tac Toe"' do
+  it 'prints "Welcome to Tic Tac Toe!"' do
     allow($stdout).to receive(:puts)
     allow(self).to receive(:gets).and_return("1")
 
