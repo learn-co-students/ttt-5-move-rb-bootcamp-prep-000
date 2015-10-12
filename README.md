@@ -46,7 +46,7 @@ We'll be writing our `#display_board` and `#move` methods in `lib/move.rb` and w
 
 ## Desired Behavior
 
-Now that we understand the broad strokes of what we've trying to accomplish, as well as where we'll be writing our code, let's take a look at an example of the functionality:
+Now that we understand the broad strokes of what we're trying to accomplish, as well as where we'll be writing our code, let's take a look at an example of the functionality:
 
 When we run our executable file with `ruby bin/move` in the terminal, inside the directory of this project, we should see something like the following:
 
