@@ -14,7 +14,7 @@ In this lab we'll be adding a `move` method to Tic Tac Toe to update the board w
 
 ## Project Structure
 
-In previous exercises, we've learned to build programs that the user interacts with via the command line. Such interaction is considered to occur through the CLI, or command line interface. Conventionally, CLI programs have a `bin` directory with contains an executable file. This file contains the code that is responsible for running the program.
+In previous exercises, we've learned to build programs that the user interacts with via the command line. Such interaction is considered to occur through the CLI, or command line interface. Conventionally, CLI programs have a `bin` directory which contains an executable file. This file contains the code that is responsible for running the program.
 
 Take a look at the file structure of this project, mapped out below:
 
