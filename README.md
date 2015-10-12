@@ -78,7 +78,7 @@ The first part of this lab is test-driven. Run `learn` to get started and use th
 
 Notice that we've already given you the `#display_board` method, since we've already built that out in a previous exercise.
 
-Your `#move` method must take in three arguments, the board array, the location in the board array that the player would like to fill out with an "X" or and "O", and the player's character (either "X" or "O"). The third argument, the player's character, should have a default of "X".
+Your `#move` method must take in three arguments, the board array, the location in the board array that the player would like to fill out with an "X" or an "O", and the player's character (either "X" or "O"). The third argument, the player's character, should have a default of "X".
 
 Regarding the player's input: if the user's input is `5`, the player wants to fill out position 5 with their character. This means that your method must fill out the correct array index with the player's character.
 
