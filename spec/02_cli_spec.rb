@@ -7,7 +7,7 @@ describe './bin/move executing a CLI Application' do
     allow(self).to receive(:move)
 
     board = get_variable_from_file("./bin/move", "board")
-    
+
     expect(board).to eq([" ", " ", " ", " ", " ", " ", " ", " ", " "])
   end
 
@@ -16,7 +16,7 @@ describe './bin/move executing a CLI Application' do
     allow(self).to receive(:gets).and_return("1")
 
     expect($stdout).to receive(:puts).with("Welcome to Tic Tac Toe!"), "Make sure `bin/move` has code that can output 'Welcome to Tic Tac Toe!' exactly."
-    
+
     run_file("./bin/move")
   end
 
@@ -32,7 +32,7 @@ describe './bin/move executing a CLI Application' do
     allow($stdout).to receive(:puts)
 
     allow(self).to receive(:gets).and_return('1')
-    expect(self).to receive(:move).with(anything, '1', anything), "Make sure `bin/move` is passing the user input to the `#move` method."
+    expect(self).to receive(:move).with(anything, '1', "X"), "Make sure `bin/move` is passing the user input to the `#move` method."
 
     run_file("./bin/move")
   end
@@ -42,18 +42,18 @@ describe './bin/move executing a CLI Application' do
 
     allow(self).to receive(:gets).and_return('1')
     board = get_variable_from_file("./bin/move", "board")
-    
+
     expect(board).to eq(["X", " ", " ", " ", " ", " ", " ", " ", " "])
   end
 
   it 'calls display_board passing the modified board' do
     allow($stdout).to receive(:puts)
-    
-    allow(self).to receive(:gets).and_return('1')    
+
+    allow(self).to receive(:gets).and_return('1')
     expect(self).to receive(:display_board).with(["X", " ", " ", " ", " ", " ", " ", " ", " "])
 
     run_file("./bin/move")
-  end  
+  end
 
   it 'prints the board with a move to the top left' do
     expect(self).to receive(:gets).and_return('1')
