@@ -46,12 +46,12 @@ We'll be writing our `#display_board` and `#move` methods in `lib/move.rb` and w
 
 ## Desired Behavior
 
-Now that we understand the broad strokes of what we've trying to accomplish, as well as where we'll be writing our code, let's take a look at an example of the functionality:
+Now that we understand the broad strokes of what we're trying to accomplish, as well as where we'll be writing our code, let's take a look at an example of the functionality:
 
 When we run our executable file with `ruby bin/move` in the terminal, inside the directory of this project, we should see something like the following:
 
 ```bash
-Welcome to Tic Tac Toe
+Welcome to Tic Tac Toe!
 Where would you like to go?
 2
    | X |   
@@ -78,7 +78,7 @@ The first part of this lab is test-driven. Run `learn` to get started and use th
 
 Notice that we've already given you the `#display_board` method, since we've already built that out in a previous exercise.
 
-Your `#move` method must take in three arguments, the board array, the location in the board array that the player would like to fill out with an "X" or and "O", and the player's character (either "X" or "O"). The third argument, the player's character, should have a default of "X".
+Your `#move` method must take in three arguments, the board array, the location in the board array that the player would like to fill out with an "X" or an "O", and the player's character (either "X" or "O"). The third argument, the player's character, should have a default of "X".
 
 Regarding the player's input: if the user's input is `5`, the player wants to fill out position 5 with their character. This means that your method must fill out the correct array index with the player's character.
 
@@ -98,7 +98,7 @@ Open up `bin/move`. We're ready to code the executable portion of this program.
 2. Next, establish the starting state of the game, i.e. the empty board. Create a new board by setting a variable `board` equal to instantiating a new array with 9 elements, each of which is a blank space, `" "`.  
 3. Now, ask the user for input by outputting "Where would you like to go?" to the terminal.
 4. We need to store the user's input. Use `gets.strip` to store their input to a variable, `input`.
-5. Now we're ready to call our `#move` method. Do so with the arguments of the the `board`, the user's `input` and an as the default `"X"`.
-6. Lastly, display the board by calling the `#display_board` method.
+5. Now we're ready to call our `#move` method. Do so with the arguments of the `board`, the user's `input` and the default player of `"X"`.
+6. Lastly, display the board by calling the `#display_board` method, passing in the necessary arguments required to run this method.
 
 Now, run your program by typing `ruby bin/move` in the terminal. Have fun playing (one round of) tic tac toe!
