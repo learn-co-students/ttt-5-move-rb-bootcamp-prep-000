@@ -50,7 +50,8 @@ describe './bin/move executing a CLI Application' do
     allow($stdout).to receive(:puts)
 
     allow(self).to receive(:gets).and_return('1')
-    expect(self).to receive(:display_board).with(["X", " ", " ", " ", " ", " ", " ", " ", " "])
+    allow(self).to receive(:display_board)
+    expect(self).to receive(:display_board).with(["X", " ", " ", " ", " ", " ", " ", " ", " "]).at_least(:once)
 
     run_file("./bin/move")
   end
