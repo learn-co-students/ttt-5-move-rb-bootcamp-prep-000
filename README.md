@@ -88,6 +88,23 @@ Also remember, from the player's point of view, the board contains spaces 1-9. A
 
 Finally, `#move` should return the modified array with the updated index corresponding to the player's token. Don't create a new local variable for the board array, modify the one passed in as the argument and return it.
 
+#### Modifying `board` with `#move`
+
+Part of your `#move` method will mean updating the `board` array passed into it. This is a tricky concept that relates to the idea of pass by reference or pass by value. Let's look at a quick example:
+
+```ruby
+board = ["", "", ""]
+def update_array_at_with(array, position, value)
+  array[position] = value
+end
+
+update_array_at_with(board, 0, "Red")
+# The 0 element in board is set to the value "Red"
+board #=> ["Red", " ", " "]
+```
+
+You might be wondering why the `update_array_at_with` is able to update the reference `board` defined outside of the method when ruby is a pass by value language. The reason is that we're not updating the reference `board`. The value of `board` is an Array object. Inside the method `update_array_at_with`, we're not changing the reference of `array`, we're changing one of that object's elements. After that object is modified, even outside of the method, the Array is updated.
+
 Once you have the tests passing, move on to part II.
 
 ### Part II: The CLI
