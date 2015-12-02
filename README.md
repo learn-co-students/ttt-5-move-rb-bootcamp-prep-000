@@ -119,3 +119,5 @@ Open up `bin/move`. We're ready to code the executable portion of this program.
 6. Lastly, display the board by calling the `#display_board` method, passing in the necessary arguments required to run this method.
 
 Now, run your program by typing `ruby bin/move` in the terminal. Have fun playing (one round of) tic tac toe!
+
+<a href='https://learn.co/lessons/ttt-5-move-rb' data-visibility='hidden'>View this lesson on Learn.co</a>
