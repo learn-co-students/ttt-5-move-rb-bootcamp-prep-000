@@ -120,4 +120,4 @@ Open up `bin/move`. We're ready to code the executable portion of this program.
 
 Now, run your program by typing `ruby bin/move` in the terminal. Have fun playing (one round of) tic tac toe!
 
-<a href='https://learn.co/lessons/ttt-5-move-rb' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-5-move-rb' title='Tic Tac Toe CLI: Adding Player Move to the Game Board'>Tic Tac Toe CLI: Adding Player Move to the Game Board</a> on Learn.co and start learning to code for free.</p>
