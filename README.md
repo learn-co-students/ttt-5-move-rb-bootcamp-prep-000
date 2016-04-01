@@ -84,9 +84,26 @@ Regarding the player's input: if the user's input is `5`, the player wants to fi
 
 The player's input is the string `'5'`, the first thing you'll need to do is convert the string to it's integer value as array indexes are always integers (think `'5'` vs `5`). Give `#to_i` a try, as in `'5'.to_i`.
 
-Also remember, from the player's point of view, the board contains spaces 1-9. An array's indexes start their count at 0. You'll have to account for that in your `#move` method.
+Also remember, from the player's point of view, the board contains spaces 1-9. An array's indexes start their count at 0. You'll have to account for that in your `#move` method by doing some math. In this one case, make sure to put spaces between the elements you type; something like `5 + 1` - not `5+1` or `5 +1`. There is an edge case which might come up and break your code if you forget the spaces.
 
 Finally, `#move` should return the modified array with the updated index corresponding to the player's token. Don't create a new local variable for the board array, modify the one passed in as the argument and return it.
+
+#### Modifying `board` with `#move`
+
+Part of your `#move` method will mean updating the `board` array passed into it. This is a tricky concept that relates to the idea of pass by reference or pass by value. Let's look at a quick example:
+
+```ruby
+board = ["", "", ""]
+def update_array_at_with(array, position, value)
+  array[position] = value
+end
+
+update_array_at_with(board, 0, "Red")
+# The 0 element in board is set to the value "Red"
+board #=> ["Red", " ", " "]
+```
+
+You might be wondering why the `update_array_at_with` is able to update the reference `board` defined outside of the method when ruby is a pass by value language. The reason is that we're not updating the reference `board`. The value of `board` is an Array object. Inside the method `update_array_at_with`, we're not changing the reference of `array`, we're changing one of that object's elements. After that object is modified, even outside of the method, the Array is updated.
 
 Once you have the tests passing, move on to part II.
 
@@ -102,3 +119,7 @@ Open up `bin/move`. We're ready to code the executable portion of this program.
 6. Lastly, display the board by calling the `#display_board` method, passing in the necessary arguments required to run this method.
 
 Now, run your program by typing `ruby bin/move` in the terminal. Have fun playing (one round of) tic tac toe!
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-5-move-rb' title='Tic Tac Toe CLI: Adding Player Move to the Game Board'>Tic Tac Toe CLI: Adding Player Move to the Game Board</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-5-move-rb'>Tic Tac Toe Move</a> on Learn.co and start learning to code for free.</p>

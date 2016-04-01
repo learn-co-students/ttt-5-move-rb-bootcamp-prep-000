@@ -54,7 +54,7 @@ describe './lib/move.rb' do
       expect(board).to eq(["X", " ", " ", " ", "X", " ", " ", " ", "X"])
     end
 
-    it 'allows a cats game' do
+    it 'allows a tie game' do
       board = Array.new(9, " ")
       move(board, 1, "X")
       move(board, 2, "O")
