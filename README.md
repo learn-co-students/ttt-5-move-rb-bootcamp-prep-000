@@ -10,7 +10,7 @@
 
 ## Overview
 
-In this lab we'll be adding a `move` method to Tic Tac Toe to update the board with a player's token. The `move` method represents a user moving into a position, like the middle cell, in Tic Tac Toe. We already have a method, `#display_board`, that prints out the tic tac toe board to the console and maps each location of the board to an array index. Then, we'll build a CLI that asks the player for the position on the board, i.e. location in the array, that they like to fill out with an "X" or an "O", updates the board, and displays the updated board.
+In this lab we'll be adding a `move` method to Tic Tac Toe to update the board with a player's token. The `move` method represents a user moving into a position, like the middle cell, in Tic Tac Toe. We already have a method, `#display_board`, that prints out the tic tac toe board to the console and maps each location of the board to an array index. Then, we'll build a CLI that asks the player for the position on the board that they like to fill out with an "X" or an "O", updates the board, and displays the updated board.
 
 ## Project Structure
 
@@ -65,8 +65,9 @@ Our program will:
 
 1. Print out a welcome message.
 2. Ask the user to input the position on the board they would like to fill.
-3. Fill out that position with either an "X" or an "O".
-4. Print the updated board.
+3. Convert the users input position to a board index
+4. Fill out the associated index in the board array with either an "X" or an "O".
+5. Print the updated board.
 
 Okay, we're ready to start coding!
 
@@ -78,13 +79,15 @@ The first part of this lab is test-driven. Run `learn` to get started and use th
 
 Notice that we've already given you the `#display_board` method, since we've already built that out in a previous exercise.
 
-Your `#move` method must take in three arguments, the board array, the location in the board array that the player would like to fill out with an "X" or an "O", and the player's character (either "X" or "O"). The third argument, the player's character, should have a default of "X".
+Your `#input_to_index` method should take in the users input and return the equivalent board index.
 
-Regarding the player's input: if the user's input is `5`, the player wants to fill out position 5 with their character. This means that your method must fill out the correct array index with the player's character.
+If the user's input is `5`, the player wants to fill out position 5 with their character. This means that your method must fill out the correct array index with the player's character.
 
 The player's input is the string `'5'`, the first thing you'll need to do is convert the string to it's integer value as array indexes are always integers (think `'5'` vs `5`). Give `#to_i` a try, as in `'5'.to_i`.
 
-Also remember, from the player's point of view, the board contains spaces 1-9. An array's indexes start their count at 0. You'll have to account for that in your `#move` method by doing some math. In this one case, make sure to put spaces between the elements you type; something like `5 + 1` - not `5+1` or `5 +1`. There is an edge case which might come up and break your code if you forget the spaces.
+Also remember, from the player's point of view, the board contains spaces 1-9. An array's indexes start their count at 0. In this one case, make sure to put spaces between the elements you type; something like `5 + 1` - not `5+1` or `5 +1`. There is an edge case which might come up and break your code if you forget the spaces.
+
+Your `#move` method must take in three arguments, the board array, the index in the board array that the player would like to fill out with an "X" or an "O", and the player's character (either "X" or "O"). The third argument, the player's character, should have a default of "X".
 
 Finally, `#move` should return the modified array with the updated index corresponding to the player's token. Don't create a new local variable for the board array, modify the one passed in as the argument and return it.
 
@@ -115,8 +118,9 @@ Open up `bin/move`. We're ready to code the executable portion of this program.
 2. Next, establish the starting state of the game, i.e. the empty board. Create a new board by setting a variable `board` equal to instantiating a new array with 9 elements, each of which is a blank space, `" "`.  
 3. Now, ask the user for input by outputting "Where would you like to go?" to the terminal.
 4. We need to store the user's input. Use `gets.strip` to store their input to a variable, `input`.
-5. Now we're ready to call our `#move` method. Do so with the arguments of the `board`, the user's `input` and the default player of `"X"`.
-6. Lastly, display the board by calling the `#display_board` method, passing in the necessary arguments required to run this method.
+5. Next, let's convert the user's input into an index and set that equal to a variable we'll call `index`.
+6. Now we're ready to call our `#move` method. Do so with the arguments of the `board`, the `index and the default player of `"X"`.
+7. Lastly, display the board by calling the `#display_board` method, passing in the necessary arguments required to run this method.
 
 Now, run your program by typing `ruby bin/move` in the terminal. Have fun playing (one round of) tic tac toe!
 
