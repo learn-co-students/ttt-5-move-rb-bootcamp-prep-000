@@ -93,7 +93,7 @@ Also remember, from the player's point of view, the board contains spaces 1-9. A
 
 So if the player types in a "2", what index in the board array do you want to access?
 
-![harrison ford 1](http://giphy.com/gifs/96OcHR3Ojz9QI "Harrison Ford: 1")
+![harrison ford 1](http://i.giphy.com/96OcHR3Ojz9QI.gif "Harrison Ford: 1")
 
 That's right, we would want to access index 1 of the board array.
 
