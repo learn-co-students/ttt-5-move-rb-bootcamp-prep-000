@@ -1,4 +1,4 @@
-# Tic Tac Toe CLI: Adding Player Move to the Game Board
+# Tic Tac Toe CLI: Adding Player Movement to the Game Board
 
 ## Objectives
 
@@ -106,13 +106,13 @@ Your `#move` method must take in three arguments, the board array, the index in 
 Part of your `#move` method will mean updating the `board` array passed into it. This is a tricky concept that relates to the idea of pass by reference or pass by value. Let's look at a quick example:
 
 ```ruby
-board = ["", "", ""]
+board = [" ", " ", " "]
 def update_array_at_with(array, index, value)
   array[index] = value
 end
 
 update_array_at_with(board, 0, "Red")
-# The 0 element in board is set to the value "Red"
+# The element at index 0 of array 'board' is set to the value "Red"
 board #=> ["Red", " ", " "]
 ```
 
@@ -134,6 +134,4 @@ Open up `bin/move`. We're ready to code the executable portion of this program.
 
 Now, run your program by typing `ruby bin/move` in the terminal. Have fun playing (one round of) tic tac toe!
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-5-move-rb' title='Tic Tac Toe CLI: Adding Player Move to the Game Board'>Tic Tac Toe CLI: Adding Player Move to the Game Board</a> on Learn.co and start learning to code for free.</p>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-5-move-rb'>Tic Tac Toe Move</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-5-move-rb' title='Tic Tac Toe CLI: Adding Player Movement to the Game Board'>Tic Tac Toe CLI: Adding Player Movement to the Game Board</a> on Learn.co and start learning to code for free.</p>
