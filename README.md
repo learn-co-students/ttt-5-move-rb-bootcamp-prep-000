@@ -87,7 +87,7 @@ Your `#input_to_index` method must take one argument, the user's input (should b
 
 Regarding the player's input: if the user's input is `"5"`, the player wants to fill out position 5 with their character. This means that your method must fill out the correct array index with the player's character.
 
-The player's input is the string `'5'`, the first thing you'll need to do is convert the string to it's integer value as array indexes are always integers (think `'5'` vs `5`). Give `#to_i` a try, as in `'5'.to_i`.
+The player's input is the string `'5'`. The first thing you'll need to do is convert the string to its integer value, because array indexes are always integers (think `'5'` vs `5`). Give `#to_i` a try, as in `'5'.to_i`.
 
 Also remember, from the player's point of view, the board contains spaces 1-9. An array's indexes start their count at 0. You'll have to account for that in your `#move` method by doing some math. In this one case, make sure to put spaces between the elements you type; something like `5 + 1` - not `5+1` or `5 +1`. There is an edge case which might come up and break your code if you forget the spaces.
 
@@ -135,3 +135,5 @@ Open up `bin/move`. We're ready to code the executable portion of this program.
 Now, run your program by typing `ruby bin/move` in the terminal. Have fun playing (one round of) tic tac toe!
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-5-move-rb' title='Tic Tac Toe CLI: Adding Player Movement to the Game Board'>Tic Tac Toe CLI: Adding Player Movement to the Game Board</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/ttt-5-move-rb'>Tic Tac Toe Move</a> on Learn.co and start learning to code for free.</p>
