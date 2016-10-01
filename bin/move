@@ -2,4 +2,17 @@
 
 require_relative '../lib/move.rb'
 
-# Code your CLI Here
+# First welcome the player
+puts "Welcome to Tic Tac Toe!"
+# Create a new board by setting a variable BOARD equal to instantiating a new array with 9 elements and blank space
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+# Ask the user for input by outputting ....
+puts "Where would you like to go?"
+# stors the user's input using get.strip method
+input = gets.strip
+# convert the user's input to an array index using our input_to_index method and store this as the variable INDEX
+index = input_to_index(input)
+# Ready to call the #move method with the arguments of the board and index. the user wants to access and the default player of "X".
+ move(board, index)
+ # Display the BOARD by calling the #display_board method, passing neccessary arguments ..
+ display_board(board)
