@@ -9,4 +9,10 @@ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 puts "Welcome to Tic Tac Toe!"
 puts "Where would you like to go?"
 
-$stdout.puts = "Where would you like to go?"
+input = gets.strip
+
+index = input_to_index(input)
+
+move(board, index, "X")
+
+display_board(board)
