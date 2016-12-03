@@ -7,3 +7,20 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def is_number? string
+  true if Integer(string) rescue false
+end
+
+def input_to_index input
+  retval = 0
+
+  if is_number? input
+    retval = input.to_i - 1
+  else
+    retval = -1
+  end
+end
+
+def move(board, pos, chr='X')
+  board[pos] = chr
+end
