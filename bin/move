@@ -1,5 +1,25 @@
+# Learn.co Bootcamp Prep - Ruby Fundamentals - 13: Tic Tac Toe Move
+
 #!/usr/bin/env ruby
 
 require_relative '../lib/move.rb'
 
-# Code your CLI Here
+# Welcome the user.
+puts "Welcome to Tic Tac Toe!"
+
+# Establish the starting state of the game - empty 'board' array.
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+# Ask user for input and store in 'input' variable.
+puts "Where would you like to go?"
+input = gets.strip
+
+# Convert the user's input to an array index using '#input_to_index' and store
+# the value as 'index'.
+index = input_to_index(input)
+
+# Call the '#move' method based on the 'board', 'index' and default 'char' ("X")
+move(board, index)
+
+# Call '#display_board' to display the new state of the game.
+display_board(board)
