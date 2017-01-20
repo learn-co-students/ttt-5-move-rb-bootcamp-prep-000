@@ -7,3 +7,15 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(number)
+    number = number.to_i
+    return number - 1
+
+end
+
+
+def move(board,index,choice = "X")
+
+  board[index] = choice
+
+end
