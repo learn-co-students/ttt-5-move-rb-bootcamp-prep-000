@@ -8,7 +8,9 @@ end
 
 # code your input_to_index and move method here!
 def input_to_index(number)
-   puts number.to_i
+  number.to_i == input
+
 end
 
-def move
+def move()
+end
