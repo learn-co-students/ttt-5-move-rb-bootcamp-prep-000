@@ -1,5 +1,22 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/move.rb'
+# call variable board
+board = Array.new(9," ")
+puts"Welcome to Tic Tac Toe!"
 
-# Code your CLI Here
+puts"\n\nPlease enter a number 1 - 9 (Cells read left to right, and top to bottom):"
+# Get number
+user_input = gets.strip
+# convert
+index = input_to_index(user_input)
+# run move
+move(board,index)
+# show board
+display_board(board)
+
+# Possible future improvement:
+# multiple passes, growing board,
+# game starts over if board array full || no game past 9 turns
+# choose team, alternating teams
+# announce winner, all possibilities including double win
