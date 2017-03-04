@@ -14,5 +14,5 @@ input = gets.strip
 index = input_to_index(input)
 # call the move method with board and the place of index from the 'input to index method'
 move(board, index)
-
+# display the board with character in place chosen by user
 display_board(board)
