@@ -3,3 +3,16 @@
 require_relative '../lib/move.rb'
 
 # Code your CLI Here
+puts "Welcome to Tic Tac Toe!"
+
+board = [" "," "," "," "," "," "," "," "," "]
+
+puts "Choose space 1 through 9"
+
+input = gets.strip
+#  create the varible 'index' that uses the method of input_to_index to match array index of 'board'
+index = input_to_index(input)
+# call the move method with board and the place of index from the 'input to index method'
+move(board, index)
+# display the board with character in place chosen by user
+display_board(board)
