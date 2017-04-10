@@ -7,3 +7,16 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(user_input)
+  index = (user_input.to_i) - 1
+  if(!(index<=8 && index>=0))then index= -1
+  end
+
+  return index
+end
+
+
+
+def move(board_array,input_index,player_symbol="X")
+  board_array[input_index]=player_symbol
+end
