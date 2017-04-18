@@ -12,8 +12,8 @@ def input_to_index(index)
 end
 
 def move(array, index, player)
-  input_to_index(index)
-  array[index] = value
+
+  array[index] = player
 end
 
 # code your input_to_index and move method here!
