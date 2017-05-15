@@ -1,3 +1,4 @@
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -7,3 +8,15 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index user_input
+  index = user_input.to_i
+  if index == false
+    return -1
+  end
+  index -= 1
+end
+
+def move(board, index, character="X")
+  board[index] = character
+  return board
+end
