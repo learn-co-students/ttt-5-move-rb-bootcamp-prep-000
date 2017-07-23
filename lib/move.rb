@@ -7,11 +7,9 @@ def display_board(board)
 end
 
 def input_to_index(input)
-  return -1 unless input.to_i.to_s == input
   input.to_i - 1
 end
 
-def move(board, index, char = "X")
-  board[index] = char
-  board
+def move(board, index, current_player = "X")
+  board[index] = current_player
 end
