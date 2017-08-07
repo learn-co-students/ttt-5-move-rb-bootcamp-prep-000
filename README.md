@@ -11,7 +11,7 @@
 
 ## Overview
 
-In this lab we'll be adding a `input_to_index` method and a `move` method to Tic Tac Toe to update the board with a player's token. The `input_to_index` method will take the user's input ("1"-"9") and convert it to the index of the board array (0-8). The `move` method represents a user moving into a position, like the middle cell, in Tic Tac Toe. We already have a method, `#display_board`, that prints out the tic tac toe board to the console and maps each location of the board to an array index. Then, we'll build a CLI that asks the player for the position on the board that they like to fill out with an "X" or an "O", convert the position to an index, update the board, and displays the updated board.
+In this lab we'll be adding an `input_to_index` method and a `move` method to Tic Tac Toe to update the board with a player's token. The `input_to_index` method will take the user's input ("1"-"9") and convert it to the index of the board array (0-8). The `move` method represents a user moving into a position, like the middle cell, in Tic Tac Toe. We already have a method, `#display_board`, that prints out the tic tac toe board to the console and maps each location of the board to an array index. Then, we'll build a CLI that asks the player for the position on the board that they like to fill out with an "X" or an "O", convert the position to an index, update the board, and displays the updated board.
 
 ## Project Structure
 
