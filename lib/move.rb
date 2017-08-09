@@ -7,3 +7,16 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(user_in)
+  num = (user_in.to_i) - 1
+  return num
+end
+
+def move(array, index, player = "X")
+  array[index] = player
+end
+
+def greeting(name)
+  greet = "Hello #{name}! Let's play Tic Tac Toe!"
+  return greet
+end
