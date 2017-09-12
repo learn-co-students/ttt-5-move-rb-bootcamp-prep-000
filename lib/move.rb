@@ -7,3 +7,16 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(index)
+  num = index.to_i
+if(num >= 1 && num <= 9)
+    return num -1
+  else
+    return -1
+  end
+end
+
+def move(board, position, character = "X")
+  board[position] = character
+  return board
+end
