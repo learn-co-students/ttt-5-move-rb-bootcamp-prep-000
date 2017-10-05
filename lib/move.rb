@@ -1,3 +1,4 @@
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -12,5 +13,6 @@ def input_to_index(pos)
 end
 
 def move(array, index, o_x = 'X')
-  array[pos] = o_x
+  array[index] = o_x
+  return array
 end
