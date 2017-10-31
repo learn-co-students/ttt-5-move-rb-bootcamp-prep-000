@@ -1,3 +1,5 @@
+# Define display_board that accepts a board and prints
+# out the current state.
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -6,4 +8,15 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-# code your input_to_index and move method here!
+# Converts Users input to integer and Converts to an index.
+def input_to_index(user_input)
+  user_input.to_i - 1
+end
+
+# Your #move method must take in three arguments, the board array,
+# the index in the board array that the player would like to fill out
+# with an "X" or an "O", and the player's character (either "X" or "O").
+# The third argument, the player's character, should have a default of "X".
+def move(board, position, player_char = "X")
+  board[position] = player_char
+end
