@@ -8,7 +8,10 @@ end
 
 # code your input_to_index and move method here!
 
-def input_to_index(num)
-  index = num - 1
-  board[index] = ' X '
+def input_to_index(user_input)
+  user_input = user_input.to_i - 1
+end
+
+def move(board, index, value = "X")
+  board[index] = value
 end
