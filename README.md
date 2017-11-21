@@ -89,7 +89,7 @@ Regarding the player's input: if the user's input is `"5"`, the player wants to 
 
 The player's input is the string `'5'`. The first thing you'll need to do is convert the string to its integer value, because array indexes are always integers (think `'5'` vs `5`). Give `#to_i` a try, as in `'5'.to_i`.
 
-Also remember, from the player's point of view, the board contains spaces 1-9. An array's indexes start their count at 0. You'll have to account for that in your `#move` method by doing some math. In this one case, make sure to put spaces between the elements you type; something like `5 + 1` - not `5+1` or `5 +1`. There is an edge case which might come up and break your code if you forget the spaces.
+Also remember, from the player's point of view, the board contains spaces 1-9. An array's indexes start their count at 0. This has been accounted for if you use `input_to_index` in your `move` implementation to return the converted value and use that as the index. In this one case, make sure to put spaces between the elements you type; something like `5 + 1` - not `5+1` or `5 +1`. There is an edge case which might come up and break your code if you forget the spaces.
 
 So if the player types in a "2", what index in the board array do you want to access?
 
