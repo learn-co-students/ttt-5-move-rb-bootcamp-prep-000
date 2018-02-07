@@ -14,6 +14,6 @@ end
 
 board = []
 
-def move(arr, index, char="X")
-  
+def move(arr, index, value="X")
+  arr[index] = value
 end
