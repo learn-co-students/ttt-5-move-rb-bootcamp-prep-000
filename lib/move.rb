@@ -12,6 +12,7 @@ def input_to_index(i)
   i.to_i - 1
 end
 
+board = []
 def move(arr, index, char="X")
   
 end
