@@ -10,5 +10,4 @@ end
 
 def input_to_index(i)
   i.to_i
-  board[i + 1] 
 end
