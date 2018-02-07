@@ -11,5 +11,5 @@ puts "Welcome to Tic Tac Toe!"
 puts "Where would you like to go?"
 input = gets.chomp.to_i
 def input_to_index(input)
-  board[input + 1] = 
+  board[input + 1] 
 end
