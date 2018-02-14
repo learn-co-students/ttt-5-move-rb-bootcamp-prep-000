@@ -9,5 +9,5 @@ display_board(board)
 puts "Where would you like to go?" #requests user input
 position = gets.strip # user string input
 index = input_to_index(position) # from user input corrected to integer -1 for array index
-puts move(board, index, "X") # places new move
+puts move(board, index, "X") # places new move X is default for unspecified
 display_board(board) #displays updated board

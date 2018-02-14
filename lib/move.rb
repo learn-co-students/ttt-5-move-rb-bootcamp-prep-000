@@ -6,12 +6,12 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def input_to_index(position) #input
-  position = position.to_i - 1
+def input_to_index(position) #input from user will be changed to board array index value
+  index = position.to_i - 1 #change user position 1-9 input to board array index
 end
 
-def move(board, position, token = "X")
-  board[position] = "#{token}"
+def move(board, index, token = "X") #takes current board, new token and its position
+  board[index] = "#{token}"
 end
 
-# code your input_to_index and move method here!
+# code your input_to_index and move method here
