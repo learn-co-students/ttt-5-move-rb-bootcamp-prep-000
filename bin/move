@@ -6,6 +6,6 @@ puts "Welcome to Tic Tac Toe!"
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 puts "Where would you like to go?"
 input = gets.strip
-index = input_tp_index
+index = input_to_index
 def move(board, index, value = "X")
 display_board(board)
