@@ -111,9 +111,9 @@ def update_array_at_with(array, index, value)
   array[index] = value
 end
 
-update_array_at_with(board, 0, "Red")
-# The element at index 0 of array 'board' is set to the value "Red"
-board #=> ["Red", " ", " "]
+update_array_at_with(board, 0, "X")
+# The element at index 0 of array 'board' is set to the value "X"
+board #=> ["X", " ", " "]
 ```
 
 You might be wondering why the `update_array_at_with` is able to update the reference `board` defined outside of the method when ruby is a pass by value language. The reason is that we're not updating the reference `board`. The value of `board` is an Array object. Inside the method `update_array_at_with`, we're not changing the reference of `array`, we're changing one of that object's elements. After that object is modified, even outside of the method, the Array is updated.
