@@ -1,4 +1,4 @@
-# Tic Tac Toe CLI: Adding Player Movement to the Game Board
+Thu# Tic Tac Toe CLI: Adding Player Movement to the Game Board
 
 ## Objectives
 
