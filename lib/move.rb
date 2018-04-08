@@ -7,3 +7,16 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+
+def input_to_index(input)
+  input.to_i - 1
+end
+
+
+def move(board, index, player = "X")
+  if (board[index] === " " && (0..9).include?(index))
+    board[index] = player
+  end
+  
+  board
+end
