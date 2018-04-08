@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/move.rb'
-
+puts "Welcome to Tic Tac Toe! Where would you like to go?"
+position = gets.str
 # Code your CLI Here
