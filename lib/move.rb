@@ -7,3 +7,17 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(user_input)
+    new_number = (user_input.to_i - 1)
+    if new_number == -1
+         -1
+    elsif new_number > 9
+        "You've exceeded the number range"
+    else
+        new_number
+    end
+end
+
+def move(board, index, value = "X")
+    board[index] = value
+end
