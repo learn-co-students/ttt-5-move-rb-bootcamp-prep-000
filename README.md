@@ -1,4 +1,4 @@
-d 17 in # Tic Tac Toe CLI: Adding Player Movement to the Game Board
+ and afterd 17 in # Tic Tac Toe CLI: Adding Player Movement to the Game Board
 
 ## Objectives
 
