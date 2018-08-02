@@ -15,10 +15,3 @@ end
 def move(board, index, token = "X")
   board[index] = token
 end
-
-def turn(board)
-  puts "Welcome to Tic Tac Toe!"
-  puts "Please enter 0-8"
-  position = gets.strip
-  move = input_to_index(position)
-end
