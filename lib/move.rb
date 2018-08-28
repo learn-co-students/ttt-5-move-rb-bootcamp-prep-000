@@ -1,9 +1,43 @@
-def display_board(board)
-  puts " #{board[0]} | #{board[1]} | #{board[2]} "
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+
+def display_board(the_board)
+  
+  puts " #{the_board[0]} | #{the_board[1]} | #{the_board[2]} "
   puts "-----------"
-  puts " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts " #{the_board[3]} | #{the_board[4]} | #{the_board[5]} "
   puts "-----------"
-  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+  puts " #{the_board[6]} | #{the_board[7]} | #{the_board[8]} "
+
+end 
+
+
+def input_to_index(input)
+  input.to_i - 1
+  
+end 
+
+def move(array, index, token = 'X')
+  array[index] = token
+  
 end
 
-# code your input_to_index and move method here!
+
+
+
+  
+  
+  
+  
+
+
+  
+  
+
+# index = #{index.to_i -1}
+
+=begin 
+def move(board, index, token = X)
+  board = [" ", " ", " ", " ", " ", " ", " ", " ", " "] 
+=end 
+
