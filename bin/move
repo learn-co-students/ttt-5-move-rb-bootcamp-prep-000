@@ -1,5 +1,77 @@
-#!/usr/bin/env ruby
+ #!/usr/bin/env ruby
 
-require_relative '../lib/move.rb'
+require_relative "../lib/move.rb"
 
-# Code your CLI Here
+puts "Welcome to Tic Tac Toe!"
+
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+display_board(board)
+
+puts "Please choose a number 1-9"
+
+puts "Where would you like to go?"
+
+user_input = gets.strip
+
+index = input_to_index(user_input) 
+
+move(board, index)
+
+display_board(board)
+
+
+
+
+
+
+
+
+
+
+
+
+#user_input = input.to_index.to_i - 1
+
+
+
+
+# convert user input(integer) to an index (0-8)
+
+# input = ("#{board[' ']}")
+
+# index = input_to_index
+
+# Only thing that exists in methods are things that were made in methods. "what's made in a method, stays in a method"...variable scope. we make methods talk with each other by assigning arguments. 
+=begin
+how do we update data in an array?  
+
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+2.3.1 :001 > board = ['a', 'b', 'c']
+ => ["a", "b", "c"]
+2.3.1 :002 > board[0]
+ => "a"
+2.3.1 :003 > user_input = "b"
+ => "b"
+2.3.1 :004 > board[0] = 'd'
+ => "d"
+2.3.1 :005 > board
+ => ["d", "b", "c"]
+
+board[input] = new_board ... update board using abstraction.
+=end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
