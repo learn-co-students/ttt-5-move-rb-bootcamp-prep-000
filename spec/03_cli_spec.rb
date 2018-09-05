@@ -6,7 +6,7 @@ describe './bin/move executing a CLI Application' do
     allow(self).to receive(:gets).and_return("1")
     allow(self).to receive(:move)
 
-    board = get_variable_from_file("./bin/move", "board")
+    board = get_variable_from_file("../bin/move", "board")
 
     expect(board).to eq([" ", " ", " ", " ", " ", " ", " ", " ", " "])
   end
