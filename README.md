@@ -103,7 +103,7 @@ Your `#move` method must take in three arguments, the board array, the index in 
 
 `#move` should also return the modified array with the updated index corresponding to the player's token. Don't create a new local variable for the board array, modify the one passed in as the argument and return it.
 
-Part of your `#move` method will mean updating the `board` array passed into it. This is a tricky concept that relates to the idea of pass by reference or pass by value. Let's look at a quick example:
+Part of your `#move` method will mean updating the `board` `Array` passed into it.
 
 ```ruby
 board = [" ", " ", " "]
@@ -115,8 +115,29 @@ update_array_at_with(board, 0, "X")
 # The element at index 0 of array 'board' is set to the value "X"
 board #=> ["X", " ", " "]
 ```
+When collection objects are passed into methods, and those collection objects are changed _within_ those methods the change is made the collection directly. It **is not** made to a copy like happens when a `Number` is passed. As an example, a test script should prove to you the oddity:
 
-You might be wondering why the `update_array_at_with` is able to update the reference `board` defined outside of the method when ruby is a pass by value language. The reason is that we're not updating the reference `board`. The value of `board` is an Array object. Inside the method `update_array_at_with`, we're not changing the reference of `array`, we're changing one of that object's elements. After that object is modified, even outside of the method, the Array is updated.
+```ruby
+def number_adder(n)
+  n += 10
+end
+
+def array_adder(a)
+  a << "new thing at the end of the array"
+end
+
+x = 10
+puts "Before call #{x}"
+number_adder(x)
+puts "After call: #{x}: Holy moly, unchanged!"
+
+z = [1, 'hi', "Byron"]
+puts "Before call #{z}"
+array_adder(z)
+puts "After call #{z}: Holy moly, *changed*!"
+```
+
+
 
 Once you have the tests passing, move on to part II.
 
