@@ -1,5 +1,15 @@
 #!/usr/bin/env ruby
-
 require_relative '../lib/move.rb'
 
-# Code your CLI Here
+board = Array.new(9, " ")
+num = 0
+
+puts "Welcome to Tic Tac Toe!"
+
+while ( num <= 0 or num > 9 )
+  puts "Where would you like to go?" 
+  num = gets.to_i
+end
+
+num = input_to_index(num)
+move(board, num)
