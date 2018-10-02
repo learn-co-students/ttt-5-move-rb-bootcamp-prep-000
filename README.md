@@ -115,7 +115,7 @@ update_array_at_with(board, 0, "X")
 # The element at index 0 of array 'board' is set to the value "X"
 board #=> ["X", " ", " "]
 ```
-When collection objects are passed into methods, and those collection objects are changed _within_ those methods the change is made the collection directly. It **is not** made to a copy like happens when a `Number` is passed. As an example, a test script should prove to you the oddity:
+When collection objects are passed into methods, and those collection objects are changed _within_ those methods, the change is made to the collection directly. The change **is not** made to a copy of what's passed in &mdash; which is _exactly_ what happens when a `Number` is passed into a method. As an example, a test script should prove to you the oddity:
 
 ```ruby
 def number_adder(n)
