@@ -11,5 +11,6 @@ end
 def input_to_index(input)
   input.toi
   move = input - 1
-  def move
+  def move(move)
+    
     
