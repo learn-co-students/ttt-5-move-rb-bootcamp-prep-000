@@ -9,10 +9,10 @@ def display_board(board)
 end
 
 def input_to_index(input)
-  square = input.to_i - 1
+  index = input.to_i - 1
 end
 
-def move(board, square, side = "X")
-  board[square] = side
+def move(board, index, value = "X")
+  board[index] = value
   #binding.pry
 end
