@@ -8,7 +8,11 @@ end
 
 # code your input_to_index and move method here!
 def input_to_index(user_input)
-  user_input_int = user_input[0].to_i
+  if user_input.is_a?Array
+    user_input_int = user_input.join.to_i
+  else
+    user_input_int = user_input.to_i
+  end  
   return -1 if (user_input_int <= 0 || user_input_int > 9 || user_input.length > 1)
   return (user_input_int - 1)
 end 
