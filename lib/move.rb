@@ -7,3 +7,18 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(user_input)
+  user_input_int = user_input[0].to_i
+  return -1 if (user_input_int <= 0 || user_input_int > 9 || user_input.length > 1)
+  return (user_input_int - 1)
+end 
+
+def move(board, position, player = "X")
+  
+  if board[position] == " "
+    board[position] = player
+  else
+    puts "position already taken, next player please"
+  end
+  return board
+end  
