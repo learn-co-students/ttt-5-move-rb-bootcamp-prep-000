@@ -1,5 +1,7 @@
 require_relative "../lib/move.rb"
 
+
+
 describe './bin/move executing a CLI Application' do
   it 'defines a board variable' do
     allow($stdout).to receive(:puts)
@@ -7,8 +9,11 @@ describe './bin/move executing a CLI Application' do
     allow(self).to receive(:move)
 
     board = get_variable_from_file("./bin/move", "board")
+    
+    # expect(defined?(board)).to be_truthy
 
     expect(board).to eq([" ", " ", " ", " ", " ", " ", " ", " ", " "])
+    # expect(true).to eq(true)
   end
 
   it 'prints "Welcome to Tic Tac Toe!"' do
