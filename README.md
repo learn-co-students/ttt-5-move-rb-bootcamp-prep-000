@@ -106,7 +106,9 @@ Your `#move` method must take in three arguments, the board array, the index in 
 Part of your `#move` method will mean updating the `board` `Array` passed into it.
 
 ```ruby
+
 board = [" ", " ", " "]
+
 def update_array_at_with(array, index, value)
   array[index] = value
 end
