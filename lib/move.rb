@@ -7,3 +7,14 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def move(position)
+  position-=1;
+  puts position
+
+    
+end
+puts "enter the move"
+move_positon= gets.chomp
+position=move_positon.to_i
+puts position
+move(position)
