@@ -1,4 +1,4 @@
-# Tic Tac Toe CLI: Adding Player Movement to the Game Board
+def move( board[index] = "space") # Tic Tac Toe CLI: Adding Player Movement to the Game Board
 
 ## Objectives
 
