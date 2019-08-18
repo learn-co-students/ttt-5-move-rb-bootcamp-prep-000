@@ -7,3 +7,13 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+board = Array.new(9, " ")
+puts "Welcome to Tic Tac Toe!"
+puts "Where would you like to go?"
+input = gets.strip
+move(board, input, "X")
+display_board(board)
+
+def move(board, position, token = "X")
+  board[position.to_i-1] = token
+end
