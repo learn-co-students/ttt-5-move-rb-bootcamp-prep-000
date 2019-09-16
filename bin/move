@@ -3,3 +3,11 @@
 require_relative '../lib/move.rb'
 
 # Code your CLI Here
+board = [" ", " ", " ", " ", " " ," ", " ", " ", " "] #the board array object
+puts "Welcome to Tic Tac Toe!"
+display_board(board)
+puts "Where would you like to place your token?" #requests user input
+position_input = gets.strip #captures user token placement input
+position_index = input_to_index(position_input) #method from lib for position_idex
+move(board, position_index, "X") #use input for method from lib
+display_board(board) #updated board per lib code
