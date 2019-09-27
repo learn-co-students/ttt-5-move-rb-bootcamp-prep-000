@@ -3,3 +3,26 @@
 require_relative '../lib/move.rb'
 
 # Code your CLI Here
+
+
+#declare array with 9 indices so that display_board fills up empty.
+board = [" "," "," "," "," "," "," "," "," "]
+
+#greet user and remember to display board
+puts "Welcome to Tic Tac Toe!"
+display_board(board)
+puts "Where would you like to go?"
+
+#grab first input using gets.strip
+input = (gets.strip)
+
+#convert user's plain english input to an integer and "-1" so that it calls the anticipated index
+#this function, located in move.rb, should return an index value so that a move can be made.
+index = input_to_index(input)
+
+#now call move method using index created above so that a move can be executed
+#Need to store the value in the board array, so add that as a paramter
+move(board, index)
+
+#display updated board with the most recent move, executed above
+display_board(board)
