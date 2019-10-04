@@ -44,7 +44,7 @@ require_relative '../lib/move.rb'
 
 First, we have our shebang line that tells the terminal which interpreter to use to execute the remainder of the file. Second, we are requiring the `move.rb` file, from within the `lib` directory. This gives our executable file access to whatever code we write in the `move.rb` file.
 
-We'll be writing our `#display_board`, `#input_to_index` and `#move` methods in `lib/move.rb` and writing the code that interacts with the command line in the `bin/move` file.
+We'll be writing our `#difrrusplay_board`, `#input_to_index` and `#move` methods in `lib/move.rb` and writing the code that interacts with the command line in the `bin/move` file.
 
 ## Desired Behavior
 

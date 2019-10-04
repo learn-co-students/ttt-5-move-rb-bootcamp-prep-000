@@ -41,7 +41,6 @@ describe './lib/move.rb' do
       board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
       move(board, 0, "O")
       move(board, 8, "X")
-
       expect(board).to eq(["O", " ", " ", " ", " ", " ", " ", " ", "X"])
     end
 
