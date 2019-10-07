@@ -19,20 +19,33 @@ end
 def update_array_at_with(board, index, value)
   index = index.to_i
   board[index] = value
-  print "BOARD: "  
+  
+  puts " "
+  print "Index: "
   puts index
-  print "IS: "
+  print "BOARD Value: "  
   puts  board[index]
+
   return board
 end
 
 
-def move(board, input, value = " X ")
-  index = input_to_index(input)
+def move(board, index, value = "X")
   index = index.to_i
-  print "INDEX IS: "  
-  puts index
+  #print "INDEX IS: "  
+  #puts index
   new_board = update_array_at_with(board, index, value)
   display_board(new_board)
 end
+
+
+
+
+
+
+
+
+
+
+
 
