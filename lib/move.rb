@@ -5,5 +5,20 @@ def display_board(board)
   puts "-----------"
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
-
 # code your input_to_index and move method here!
+
+def input_to_index(user_input)
+   user_input.to_i - 1
+end
+
+def move(board,index, value = "X")
+  update_array_at_with(board, index, value)
+end
+def update_array_at_with(array, index, value)
+  array[index] = value
+end
+
+
+
+# The element at index 0 of array 'board' is set to the value "Red"
+#board #=> ["Red", " ", " "]
