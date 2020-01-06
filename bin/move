@@ -10,7 +10,7 @@ puts "Welcome to Tic Tac Toe!"
 puts "Please pick a number between 1-9"
 display_board(board)
 
-choice = gets
+choice = gets.strip
 
 move(board, input_to_index(choice))
 
