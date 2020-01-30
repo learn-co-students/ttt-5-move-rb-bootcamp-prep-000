@@ -7,3 +7,14 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+
+def input_to_index(user)
+#input = gets.chomp.strip
+
+user.to_i - 1
+#do puts display_board
+end
+
+def move(array,index,value = "X")
+array[index] = value
+end
