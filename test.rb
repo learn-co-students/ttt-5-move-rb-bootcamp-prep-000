@@ -1,3 +1,5 @@
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -14,3 +16,10 @@ def move(board,index,player="X")
   board[index]=player
 end
 
+puts "Welcome to Tic Tac Toe!"
+puts "Where would you like to go?"
+
+input = gets.strip
+input_to_index(input)
+move(board,input_to_index(input),"O")
+display_board(board)
