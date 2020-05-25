@@ -2,15 +2,15 @@
 
 require_relative '../lib/move.rb'
 
-# Code your CLI Here
-
 #Welcome to Tic Tac Toe!
-puts "Hi! Welcome to Tic-Tac-Toe!"
+puts "Welcome to Tic Tac Toe!"
+
+#establish the starting state of the game, i.e. the empty board
+board = [" "," "," "," "," "," "," "," "," "]
 
 #Where would you like to go?
 puts "Where would you like to go?"
 
-board = [" "," "," "," "," "," "," "," "," "]
 
 #We need to store the user's input. Use `gets.strip` to store their input to a variable, `input`.
 input = gets.strip
