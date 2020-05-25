@@ -3,3 +3,15 @@
 require_relative '../lib/move.rb'
 
 # Code your CLI Here
+
+puts "Hi! Welcome to Tic-Tac-Toe!"
+puts "Please enter the number of the position that you would like to place your marker on, where 1 is the top left corner 
+      and 9 is in the bottom right corner.  Then enter X or O."
+input_to_index(user_input)
+
+
+
+
+
+
+
