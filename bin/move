@@ -3,3 +3,28 @@
 require_relative '../lib/move.rb'
 
 # Code your CLI Here
+
+board = empty_board
+player_turn = CHAR_PLAYER_X
+
+puts "Welcome to Tic Tac Toe!"
+
+#loop do
+  puts "The current state of the game is:"
+  show_current_state(board)
+  index = ask_for_command(board, player_turn)
+  if index == INDEX_CMD_LOST
+    puts "Game lost...."
+    #break
+  elsif index == INDEX_CMD_ABORT
+    puts "Game aborted...."
+    #break
+  elsif index == INDEX_CMD_EXIT
+    puts "Game Exit...."
+    #break
+  else
+    move(board, index, player_turn)
+    player_turn = find_next_player(player_turn)
+    show_current_state(board)
+  end
+#end
