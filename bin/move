@@ -3,3 +3,18 @@
 require_relative '../lib/move.rb'
 
 # Code your CLI Here
+#welcome message
+puts "Welcome to Tic Tac Toe!"
+
+#create initial board state
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+#query user for cell
+puts "Where would you like to go?"
+index = input_to_index(gets.strip)
+
+#call move and pass all params
+move(board, index, "X")
+
+#display board
+display_board(board)
