@@ -7,3 +7,11 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(cell_num)
+  cell_int = cell_num.to_i
+  i = cell_int - 1
+end
+
+def move(board, i, token="X")
+  board[i] = token
+end
