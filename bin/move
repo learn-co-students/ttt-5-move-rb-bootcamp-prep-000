@@ -2,4 +2,17 @@
 
 require_relative '../lib/move.rb'
 
-# Code your CLI Here
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+puts "Welcome to Tic Tac Toe!"
+puts "Where would you like to go? (Choose from 1-9):"
+
+input = gets.strip
+index = input_to_index(input)
+
+move(board, index)
+display_board(board)
+
+# If I input 9 or above, it prints a blank board.
+# If I input 0 or below, it starts at the OTHER end and puts the X there.
+# But if I input -9 or lower, I get an error saying that it's too small for the array.
