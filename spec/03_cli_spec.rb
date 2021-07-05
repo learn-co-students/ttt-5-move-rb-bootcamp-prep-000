@@ -1,4 +1,6 @@
 require_relative "../lib/move.rb"
+require_relative "spec_helper.rb"
+
 
 describe './bin/move executing a CLI Application' do
   it 'defines a board variable' do
