@@ -1,3 +1,5 @@
+tic_tac_toe=["","","","","","","","",""]
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -6,4 +8,11 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-# code your input_to_index and move method here!
+def input_to_index(number)
+  index=number.to_i-1
+end
+
+def move(array,location,letter="X")
+   array[location]=letter
+   return display_board(array)
+end
