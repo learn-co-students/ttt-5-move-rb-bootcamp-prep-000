@@ -3,3 +3,25 @@
 require_relative '../lib/move.rb'
 
 # Code your CLI Here
+#CLI - asks the player for the position on the board 
+#that they like to fill out with an "X" or an "O", 
+#convert the position to an index, 
+#update the board, 
+#and displays the updated board.
+
+
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+puts "Welcome to Tic Tac Toe!"
+
+
+puts "Where would you like to go?"
+
+input = gets.strip
+
+index = input_to_index(input)
+
+move(board, index, "X")
+
+display_board(board)   # @ 9.15 pm did not have an argument
+
