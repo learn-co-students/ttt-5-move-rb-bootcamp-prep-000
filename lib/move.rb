@@ -6,4 +6,16 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-# code your input_to_index and move method here!
+#board = the board array
+#position = the index in the board the player would like to fill
+#char= players character (X or O)
+
+
+
+def move(board, input, character="X")
+  board[input] = character
+end
+
+def input_to_index(input)
+input.to_i - 1
+end
