@@ -7,3 +7,15 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+
+
+def input_to_index(move)
+  puts = "TEST"
+  move.to_i - 1
+end
+
+def move(board, move_num, player = "X")
+  
+  board[move_num] = player
+
+end
